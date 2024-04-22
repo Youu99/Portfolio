@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee You Min Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- foot -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 애니메이션 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body>
+
+  
+    <!-- 첫 화면 페이지 -->
+    <div id="title_page">
+        <!-- 우주 배경 -->
+        <canvas id="canvas" class="canvas"></canvas>
+        <h1 id="titleh1">PORTFOLIO</h1>
+        <p id="title_p">The goal is the front end</p>
+        <div id="click_box">Click</div>
+    </div>
+
+
+    <!-- 스와이퍼 전체 페이지 -->
+
+
+    <div id="swiper_page">
+            <!-- 메뉴탭 -->
+
+        <div id="nav">
+            <div class="logo">LYM</div>
+    
+    
+        </div>
+    
+        <div class="swiper mySwiper" >
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <h1 class="About_h">About Me</h1>
+                    <div><img src="img/pixel-cat.gif" alt="gifimg"></div>
+                    <div id="About_text_box">
+                    <h2 id="About_h2" class="text">"안녕하세요 프론트 엔드 개발자를 목표로 노력중인 이유민입니다."</h2>
+                    <p class="About_p">많은 일을 거쳐가며 프론트 엔드라는 목표를향해 도전중입니다. 
+                    <p class="About_p">늦었지만 그동안 배운 경험을 통해 더욱빠르게 발전하고 배우며 목표에 다가가도록 노력하겠습니다.</p>
+                    <p class="About_p">다양한 기술들과 디자인들을 보고 습득하여 프론트엔드 개발자라는 꿈을향해 달려가겠습니다. </p>
+                   
+                    
+                    </p>
+                </div>
+                </div>
+
+
+
+                <div class="swiper-slide">
+                    <h1 class="About_h">SKILLS</h1>
+                    <span class="About_s">*아이콘에 마우스로 클릭하시면 자세한 내용이 나옵니다.</span>
+
+                    <div id="SKILLS_box">
+                        <h3>SKILLS</h3>
+                        <div id="SKILLS_list">
+                            <div class="SKILLS_list_tap"> 
+                                <div class="SKILLS_list"><img src="img/HTML.png" alt="Skillsicon"></div>
+                                <div class="SKILLS_list"><img src="img/CSS.png" alt="Skillsicon"></div>
+                                <div class="SKILLS_list"><img src="img/SCSS.png" alt="Skillsicon"></div>
+                                <div class="SKILLS_list"><img src="img/JQUERY.png" alt="Skillsicon"></div>
+                                <div class="SKILLS_list"><img src="img/JS.png" alt="Skillsicon"></div>
+                                <div class="SKILLS_list"><img src="img/REACT.png" alt="Skillsicon"></div>
+
+                                </div>
+                                <h3>USING TOOL</h3>
+                                <div class="SKILLS_list_tap2"> 
+                                   <div class="SKILLS_list2"><img src="img/Visual Studio.png" alt="Skillsicon"></div>
+                                   <div class="SKILLS_list2"><img src="img/Photoshop.png" alt="Skillsicon"></div>
+                                   <div class="SKILLS_list2"><img src="img/GIT.png" alt="Skillsicon"></div>
+                                </div>
+
+
+                            <div id="tag_box_list">
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/HTML.png" alt="Skillsicon">
+                                    <p>웹페이지를 기술하기 위한 마크업 언어이다. 조금 더 자세히 말하면<br> 웹페이지의 내용(content)과 구조(structure)을 담당하는 언어로써<br> HTML 태그를 통해 정보를 구조화하는 것이다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/CSS.png" alt="Skillsicon">
+                                    <p>CSS는 Cascading Style Sheets의 약자로 기본적인 스타일이<br>이미 지정된 HTML 요소를 개발자가 직접 다양한 스타일로<br> 디자인할 수 있는 언어입니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/SCSS.png" alt="Skillsicon">
+                                    <p>SCSS는 Sass(Syntactically Awesome Stylesheets)의 가장 널리 사용되는 문법 중 하나입니다. Sass는 CSS의 확장으로, CSS의 한계를 극복하고 스타일시트를 쉽게 작성할 수 있도록 다양한 기능을 제공합니다. SCSS는 CSS와 거의 같은 문법을 가지고 있어, CSS를 이미 알고 있는 개발자들이 쉽게 배우고 사용할 수 있는 장점이 있습니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/JQUERY.png" alt="Skillsicon">
+                                    <p>jQuery는 웹 개발에서 자바스크립트를 더 쉽게 사용할 수 있도록 설계된 경량의 자바스크립트 라이브러리입니다. 크로스 브라우징(다양한 웹 브라우저의 호환성) 문제를 해결하고, DOM(Document Object Model) 조작, 이벤트 처리, 애니메이션 구현 등 자바스크립트를 사용하여 웹 페이지를 동적으로 만드는 작업을 보다 쉽게 할 수 있도록 지원합니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/JS.png" alt="Skillsicon">
+                                    <p>jQuery는 웹 개발에서 자바스크립트를 더 쉽게 사용할 수 있도록 설계된 경량의 자바스크립트 라이브러리입니다. 2006년 존 레식(John Resig)에 의해 개발되었으며, 크로스 브라우징(다양한 웹 브라우저의 호환성) 문제를 해결하고, DOM(Document Object Model) 조작, 이벤트 처리, 애니메이션 구현 등 자바스크립트를 사용하여 웹 페이지를 동적으로 만드는 작업을 보다 쉽게 할 수 있도록 지원합니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <img src="img/REACT.png" alt="Skillsicon">
+                                    <p>React는 사용자 인터페이스를 구축하기 위한 오픈 소스 JavaScript 라이브러리입니다. 2013년에 페이스북에 의해 개발되었으며, 웹과 모바일 애플리케이션의 프론트엔드 개발에 널리 사용되고 있습니다. React의 주요 특징은 가상 DOM, 컴포넌트 기반 아키텍처, 그리고 선언적인 UI를 포함합니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <img src="img/Visual Studio.png" alt="Skillsicon">
+                                    <p>Visual Studio는 마이크로소프트에서 개발한 통합 개발 환경(IDE)으로, 다양한 프로그래밍 언어와 플랫폼을 지원하여 소프트웨어 개발자들이 데스크톱 애플리케이션, 모바일 애플리케이션, 웹 애플리케이션, 웹 서비스 등을 개발할 수 있게 돕는 도구입니다. 처음 발표된 이후로 지속적으로 업데이트되면서 개발자 커뮤니티에서 널리 사용되고 있습니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <img src="img/Photoshop.png" alt="Skillsicon">
+                                    <p>Adobe Photoshop은 Adobe Systems에서 개발한 전문적인 이미지 편집 및 그래픽 디자인 소프트웨어입니다. 1988년에 처음 출시된 이래로, Photoshop은 디지털 아트, 사진 편집, 웹 디자인, 그래픽 디자인 등 다양한 분야에서 광범위하게 사용되고 있습니다. 사용자는 이 소프트웨어를 사용하여 사진을 조작하고, 복잡한 디지털 그림을 그리며, 다양한 시각적 효과를 생성할 수 있습니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <img src="img/GIT.png" alt="Skillsicon">
+                                    <p>Git은 소프트웨어 개발에서 소스 코드 관리를 위한 분산 버전 관리 시스템입니다. 리누스 토발즈에 의해 2005년에 개발되었으며, 그의 목적은 속도와 효율성, 그리고 대규모 프로젝트의 분산 개발을 용이하게 하는 것이었습니다. Git은 오늘날 가장 널리 사용되는 버전 관리 시스템 중 하나로, 개인 프로젝트부터 대규모 기업 프로젝트에 이르기까지 다양한 규모의 개발 작업에 적용됩니다.</p>
+                                    <button class="SKILLS_b">그만보기</button>
+                                </div>
+                            </div>
+
+                            </div>
+
+
+                         
+                            
+                          
+
+
+                           
+                        </div>
+                    </div>
+                
+                <div class="swiper-slide">Porject</div>
+                <div class="swiper-slide">마무리</div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- js 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.js"></script>
+
+</body>
+
+</html>

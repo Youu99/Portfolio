@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.canvas {
+  opacity: 1;
+  position: relative;
+
+}
+
+/* 첫 화면 페이지 */
+
+#title_page {
+  width: 100%;
+  margin: 0 auto;
+  background: #060e1b;
+  overflow: hidden;
+  height: 953px;
+  position: absolute;
+}
+
+#titleh1 {
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  color: #fff;
+  font-size: 80px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 10.5ch;
+  animation: typing 2.5s steps(40), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+
+
+}
+
+#title_p {
+  position: absolute;
+  top: 48%;
+  left: 40%;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#click_box {
+  position: absolute;
+  top: 60%;
+  left: 47%;
+  color: #fff;
+  font-size: 20px;
+  width: 70px;
+  height: 35px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: appearDisappear infinite 2.5s;
+}
+
+#click_box:hover {
+  background-color: #fff;
+  color: #060e1b;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+
+@keyframes appearDisappear {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+/* 네비게이션 */
+
+#nav {
+  background-color: #060e1b;
+}
+
+.logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 3px 3px 0px #bbb, 8px 8px 0px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+}
+
+
+
+/* 스와이퍼 전체페이지 */
+
+
+
+#swiper_page {
+  width: 100%;
+  height: 953px;
+  display: none;
+
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#swiper_page .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #060e1b;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+#swiper_page .swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+}
+
+#swiper_page .swiper-pagination-bullet {
+  background-color: aliceblue;
+  width: 15px;
+  height: 15px;
+
+}
+
+.About_h {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+#About_text_box {
+  opacity: 0;
+  /* 초기에 텍스트를 보이지 않게 설정 */
+  animation: fadeInAnimation ease 4s;
+  /* 애니메이션 이름, 속도 곡선, 지속 시간 설정 */
+  animation-fill-mode: forwards;
+  /* 애니메이션이 끝난 상태를 유지 */
+  margin-top: 60px;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+
+  /* 시작 상태 */
+  to {
+    opacity: 1;
+  }
+
+  /* 끝 상태 */
+}
+
+
+
+#About_h2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.About_p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+
+
+/* 스킬 페이지 */
+.About_s {
+  font-size: 15px;
+  font-weight: 400;
+  color: #686868;
+}
+
+
+#SKILLS_box {
+  width: 800px;
+  margin: 40px 0 0 150px;
+  position: relative;
+
+  h3 {
+    text-align: left;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-style: normal;
+    margin: 20px 0;
+  }
+}
+
+.SKILLS_list_tap,.SKILLS_list_tap2{
+  width: 650px;
+  height: 250px;
+  margin-bottom: 20px;
+  display: flex; 
+  flex-wrap: wrap; 
+  
+
+}
+
+.SKILLS_list,.SKILLS_list2{
+  width: 110px;
+  height: 110px;
+  border: 1px solid #686868;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  
+}
+
+.SKILLS_list:hover{
+  background-color: #fff;
+  transition: all 1s;
+}
+
+.SKILLS_list_tap:nth-of-type(2){
+  height: 130px;
+}
+
+#tag_box_list .SKILLS_tag_box,.SKILLS_tag_box2{
+  width: 650px;
+  height: 540px;
+  background-color:#fff;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 0 60px;
+  
+  img{
+    width: 290px;
+    height: 250px;
+    margin: 20px auto 0;
+  }
+  p{
+    color: #060e1b;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+ 
+}
+.SKILLS_b{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #fff;
+  width: 100px;
+  height: 40px;
+  margin-top: 40px;
+  cursor: pointer;
+ 
+}
+.SKILLS_b:hover{
+  background-color: black;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+#tag_box_list .SKILLS_tag_box,.SKILLS_tag_box2{
+  display: none;
+}
+
+

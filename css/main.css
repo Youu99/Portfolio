@@ -140,7 +140,7 @@
 #swiper_page .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #060e1b;
+  background-image: url(../img/black-space-outer-space.gif);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -177,6 +177,7 @@
   font-size: 60px;
   margin-top: 100px;
   margin-bottom: 10px;
+  text-shadow: 5px 3px 0px #bbb, 8px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 #About_text_box {
@@ -242,22 +243,23 @@
     font-family: "Libre Caslon Text", serif;
     font-weight: 700;
     font-style: normal;
-    font-style: normal;
     margin: 20px 0;
   }
 }
 
-.SKILLS_list_tap,.SKILLS_list_tap2{
+.SKILLS_list_tap,
+.SKILLS_list_tap2 {
   width: 650px;
   height: 250px;
   margin-bottom: 20px;
-  display: flex; 
-  flex-wrap: wrap; 
-  
+  display: flex;
+  flex-wrap: wrap;
+
 
 }
 
-.SKILLS_list,.SKILLS_list2{
+.SKILLS_list,
+.SKILLS_list2 {
   width: 110px;
   height: 110px;
   border: 1px solid #686868;
@@ -267,44 +269,50 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  
 
-  img{
+
+  img {
     width: 100px;
     height: 100px;
   }
-  
+
 }
 
-.SKILLS_list:hover{
+.SKILLS_list:hover {
+  background-color: #fff;
+  transition: all 1s;
+}
+.SKILLS_list2:hover {
   background-color: #fff;
   transition: all 1s;
 }
 
-.SKILLS_list_tap:nth-of-type(2){
+.SKILLS_list_tap:nth-of-type(2) {
   height: 130px;
 }
 
-#tag_box_list .SKILLS_tag_box,.SKILLS_tag_box2{
+#tag_box_list .SKILLS_tag_box,
+.SKILLS_tag_box2 {
   width: 650px;
   height: 540px;
-  background-color:#fff;
+  background-color: #fff;
   position: absolute;
   top: 10%;
   left: 0%;
   display: flex;
-  justify-content:start;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
   padding: 0 60px;
-  
-  img{
+
+  img {
     width: 290px;
     height: 250px;
     margin: 20px auto 0;
   }
-  p{
+
+  p {
     color: #060e1b;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -314,9 +322,10 @@
     line-height: 30px;
   }
 
- 
+
 }
-.SKILLS_b{
+
+.SKILLS_b {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -326,16 +335,224 @@
   height: 40px;
   margin-top: 40px;
   cursor: pointer;
- 
+
 }
-.SKILLS_b:hover{
+
+.SKILLS_b:hover {
   background-color: black;
   color: #fff;
   transition: all 0.5s;
 }
 
-#tag_box_list .SKILLS_tag_box,.SKILLS_tag_box2{
+#tag_box_list .SKILLS_tag_box,
+.SKILLS_tag_box2 {
   display: none;
 }
 
 
+/* 프로젝트 페이지 */
+
+#project {
+  width: 700px;
+  height: 600px;
+  position: relative;
+}
+
+.mySwiper2 {
+  margin-top: 40px;
+}
+
+#project .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#project .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#project .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+#project .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+
+
+.PEAPJ {
+  background-image: url(../img/REACTPJ.png);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+
+.PEAPJ.I2 {
+  background-image: url(../img/HTMLAPI.png);
+}
+
+
+
+.PEAPJ.I3 {
+  background-image: url(../img/TimHtml.png);
+}
+
+
+
+.PEAPJ.I4 {
+  background-image: url(../img/HTMLPJ.png);
+}
+
+
+
+.PEAPJ.I5 {
+  background-image: url(../img/APPJ.png);
+}
+
+
+
+.PRO_SKILLS {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+
+  p {
+    font-size: 15px;
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    border: 1px solid #0090F0;
+    background-color: #0090F0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 700;
+    font-style: normal;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+  }
+}
+
+.PRO_Chat_box {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+  }
+  h3{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd;
+    font-size: 17px;
+    margin-top: 10px;
+    
+  }
+  p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    margin-top: 20px;
+    
+  }
+ 
+}
+#project .PRO_Chat_box .pjbtn{
+  width: 150px;
+  height: 35px;
+  margin-top: 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+#project .PRO_Chat_box .pjbtn:hover{
+  background-color: #fff;
+  color: black;
+  transition: all 0.5s;
+  
+}
+
+#project .swiper-pagination-progressbar-fill {
+  background-color: #eee;
+  height: 8px;
+
+}
+
+#project .swiper-pagination-horizontal {
+  height: 8px;
+  top: 59%;
+}
+
+#project .swiper-button-next {
+  position: absolute;
+  top: 460px;
+  left: 750px;
+  color: #fff;
+}
+
+#project .swiper-button-prev {
+  position: absolute;
+  top: 460px;
+  left: -60px;
+  color: #fff;
+}
+
+
+/* 마무리 페이지 */
+
+.CON_p{
+  font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    margin-top: 160px;
+}
+
+.CON_p1{
+  font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    margin-top: 10px;
+   
+}
+
+.CON_d{
+  margin-top: 40px;
+  width: 300px;
+}

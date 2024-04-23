@@ -8,3 +8,16 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+// 스와이퍼 프로젝트 페이지
+
+var swiper2 = new Swiper(".mySwiper2", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

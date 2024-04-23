@@ -119,5 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// 자기소개 텍스트 생성
+
+// 슬라이드 
+
+
 

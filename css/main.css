@@ -74,6 +74,7 @@
   color: #060e1b;
   cursor: pointer;
   transition: all 0.5s;
+  animation-play-state: running !important;
 }
 
 

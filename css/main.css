@@ -2,13 +2,19 @@
   margin: 0;
   padding: 0;
 }
-
-
-.canvas {
-  opacity: 1;
-  position: relative;
-
+ol,ul,li{
+  list-style: none;
 }
+
+a{
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 /* 첫 화면 페이지 */
 
@@ -21,62 +27,21 @@
   position: absolute;
 }
 
-#titleh1 {
-  position: absolute;
-  top: 30%;
-  left: 36%;
-  color: #fff;
-  font-size: 80px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-  width: 10.5ch;
-  animation: typing 2.5s steps(40), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-
-
+#Tag1{
+  position: relative;
 }
 
-#title_p {
+#scrollicon{
   position: absolute;
-  top: 48%;
-  left: 40%;
-  color: #fff;
-  font-size: 30px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-#click_box {
-  position: absolute;
-  top: 60%;
-  left: 47%;
-  color: #fff;
-  font-size: 20px;
-  width: 70px;
-  height: 35px;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: appearDisappear infinite 2.5s;
-}
-
-#click_box:hover {
-  background-color: #fff;
-  color: #060e1b;
+  top: 75%;
+  width: 80px;
+  height: 100px;
   cursor: pointer;
-  transition: all 0.5s;
-  animation-play-state: running !important;
+  img{
+    width: 100%;
+  }
 }
-
 
 @keyframes appearDisappear {
 
@@ -102,14 +67,47 @@
   }
 }
 
+#titleh1 {
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  color: #fff;
+  font-size: 80px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 10.5ch;
+  animation: typing 2.5s steps(40), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+
+
+}
+
+#title_p {
+  position: absolute;
+  top: 48%;
+  left: 30%;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
 
 /* 네비게이션 */
 
 #nav {
-  background-color: #060e1b;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .logo {
@@ -119,9 +117,44 @@
   color: #fff;
   text-shadow: 3px 3px 0px #bbb, 8px 8px 0px rgba(0, 0, 0, 0.15);
   margin-left: 20px;
+  padding-top: 20px;
 }
 
 
+
+#nav div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.custom-pagination{
+  position: fixed;
+    top: 10px;
+    left: 75%;
+    width: 50%;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+.custom-bullet{
+  color: #fff;
+  font-size: 24px;
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-right: 15px;
+  
+
+}
 
 /* 스와이퍼 전체페이지 */
 
@@ -130,7 +163,6 @@
 #swiper_page {
   width: 100%;
   height: 953px;
-  display: none;
   position: relative;
 }
 
@@ -155,9 +187,17 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 80%;
+  width: 30%;
+ 
   object-fit: cover;
+}
+
+
+#swiper_page .swiper-pagination-bullet {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
 }
 
 #swiper_page .swiper-pagination-bullet-active {
@@ -165,13 +205,11 @@
   width: 15px;
   height: 15px;
   margin: 10px 0;
+  opacity: 1;
 }
 
-#swiper_page .swiper-pagination-bullet {
-  background-color: aliceblue;
-  width: 15px;
-  height: 15px;
-
+.custom-bullet:first-child{
+color: #0090F0;
 }
 
 .About_h {
@@ -186,27 +224,20 @@
 
 #About_text_box {
   opacity: 0;
-  /* 초기에 텍스트를 보이지 않게 설정 */
-  animation: fadeInAnimation ease 4s;
-  /* 애니메이션 이름, 속도 곡선, 지속 시간 설정 */
+  animation: fadeInAnimation ease 5s;
   animation-fill-mode: forwards;
-  /* 애니메이션이 끝난 상태를 유지 */
   margin-top: 60px;
-}
-
-@keyframes fadeInAnimation {
+  }
+  
+  @keyframes fadeInAnimation {
   from {
-    opacity: 0;
+  opacity: 0;
   }
-
-  /* 시작 상태 */
+  
   to {
-    opacity: 1;
+  opacity: 1;
   }
-
-  /* 끝 상태 */
-}
-
+  }
 
 
 #About_h2 {
@@ -227,19 +258,44 @@
   margin-top: 10px;
 }
 
+.image-container {
+  width: 1000px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* 이미지에 적용할 애니메이션 스타일을 정의합니다. */
+@keyframes slideInfinite {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+#gomimg{
+  /* 이미지가 화면 바깥에서 시작하여 화면을 가로질러 이동하도록 설정합니다. */
+  position: absolute;
+  animation: slideInfinite 4s linear infinite; 
+}
+
+
 
 
 /* 스킬 페이지 */
 .About_s {
   font-size: 15px;
-  font-weight: 400;
-  color: #686868;
+  font-weight: 500;
+  color: #aaaaaa;
 }
 
 
 #SKILLS_box {
   width: 800px;
-  margin: 40px 0 0 150px;
+  margin: 20px 0 0 200px;
   position: relative;
 
   h3 {
@@ -251,23 +307,29 @@
   }
 }
 
-.SKILLS_list_tap,
-.SKILLS_list_tap2 {
-  width: 650px;
-  height: 250px;
+.SKILLS_list_tap
+ {
+  width: 640px;
+  height: 100px;
   margin-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-
+.SKILLS_list_tap2{
+  width: 640px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  
 }
 
 .SKILLS_list,
 .SKILLS_list2 {
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border: 1px solid #686868;
-  margin-right: 15px;
+  margin-right: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -276,20 +338,13 @@
 
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    
   }
 
 }
 
-.SKILLS_list:hover {
-  background-color: #fff;
-  transition: all 1s;
-}
-.SKILLS_list2:hover {
-  background-color: #fff;
-  transition: all 1s;
-}
+
 
 .SKILLS_list_tap:nth-of-type(2) {
   height: 130px;
@@ -297,48 +352,72 @@
 
 #tag_box_list .SKILLS_tag_box,
 .SKILLS_tag_box2 {
-  width: 650px;
-  height: 540px;
-  background-color: #fff;
-  position: absolute;
-  top: 10%;
-  left: 0%;
+  width: 630px;
+  height: 100px;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-  padding: 0 60px;
-
-  img {
-    width: 290px;
-    height: 250px;
-    margin: 20px auto 0;
-  }
-
-  p {
-    color: #060e1b;
-    font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 20px;
-    line-height: 30px;
-  }
-
 
 }
 
-.SKILLS_b {
-  font-family: "Noto Sans KR", sans-serif;
+#tag_box_list{
+  position: relative;
+
+}
+
+
+
+.SKILLS_tag_box_list{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  p{
+    font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  background-color: #fff;
-  width: 100px;
+  color: #fff;
+  margin:30px 0 0 20px;
+  text-align: left;
+  font-size: 17px;
+  }
+  
+  span{
+    font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  margin:10px 0 0 20px;
+  text-align: left;
+  font-size: 17px;
+  }
+}
+.SKILLS_b {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  background:none;
+  width: 50px;
   height: 40px;
-  margin-top: 40px;
+  margin-top: 10px;
   cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  color: #0090F0;
+  border: 1px solid #ddd;
 
 }
 
@@ -457,6 +536,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100px;
+  position: relative;
 
   h2{
     font-family: "Noto Sans KR", sans-serif;
@@ -475,19 +556,30 @@
     margin-top: 10px;
     
   }
-  p {
+  a {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: #fff;
     margin-top: 20px;
+    text-decoration: none;
     
+  }
+  p{
+    margin-top: 10px;
+    text-align: left;
+    line-height: 30px;
+  }
+
+  b{
+    color: #0090F0;
+    font-size: 22px;
   }
  
 }
 #project .PRO_Chat_box .pjbtn{
-  width: 150px;
+  width: 140px;
   height: 35px;
   margin-top: 30px;
   font-family: "Noto Sans KR", sans-serif;
@@ -500,6 +592,9 @@
   justify-content: center;
   margin-left: 300px;
   cursor: pointer;
+  position: absolute;
+  top: -35px;
+  left: 37%;
 }
 
 #project .PRO_Chat_box .pjbtn:hover{
@@ -537,13 +632,23 @@
 
 /* 마무리 페이지 */
 
+
+#CON_box{
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
+
 .CON_p{
   font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 24px;
-    margin-top: 160px;
+    width: 200px;
+    margin-top: 20px;
+    
 }
 
 .CON_p1{
@@ -551,12 +656,37 @@
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 10px;
-   
+    text-align: right;
+    width: 600px;
+    
+}
+
+.CON_p2{
+  font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 10px;
+   line-height: 37px;
+   width: 200px;
 }
 
 .CON_d{
   margin-top: 40px;
   width: 300px;
+  img{
+    width: 100%;
+  }
+}
+
+tr{
+ height: 40px;
+}
+tr:hover{
+  color: #0090F0;
+  cursor: pointer;
+  transition: all 0.5s;
 }

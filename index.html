@@ -30,13 +30,7 @@
 
 
     <!-- 첫 화면 페이지 -->
-    <div id="title_page">
-        <!-- 우주 배경 -->
-        <canvas id="canvas" class="canvas"></canvas>
-        <h1 id="titleh1">PORTFOLIO</h1>
-        <p id="title_p">The goal is the front end</p>
-        <div id="click_box">Click</div>
-    </div>
+   
 
 
     <!-- 스와이퍼 전체 페이지 -->
@@ -45,18 +39,34 @@
     <div id="swiper_page">
         <!-- 메뉴탭 -->
 
-        <div id="nav">
-            <div class="logo">LYM</div>
-
-
-        </div>
+       
 
         <div class="swiper mySwiper">
+            <div id="nav">
+                <div class="logo">LYM</div>
+            </div>
+    
+    
+          
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="Tag1">
+
+                    <h1 id="titleh1">PORTFOLIO</h1>
+                    <p id="title_p">The goal is to be a competent front-end developer.</p>
+                    
+                    <div id="scrollicon"><img src="img/scrollicon.png" alt="scrollicon"></div>
+                  
+                </div>
+
+
+
+                
+                <div class="swiper-slide" id="Tag2">
                     <h1 class="About_h">About Me</h1>
-                    <div><img src="img/pixel-cat.gif" alt="gifimg"></div>
+
+                    <div class="image-container"><img src="img/pixel-cat.gif" alt="gifimg" id="gomimg"></div>
+
                     <div id="About_text_box">
                         <h2 id="About_h2" class="text">"안녕하세요 저는 신입 프론트 엔드 개발자를 목표로 노력중인 이유민입니다."</h2>
                         <p class="About_p">많은 일을 거쳐 가며 능력있는 프론트 엔드를 목표로 도전 중입니다.
@@ -66,16 +76,16 @@
 
                         </p>
                     </div>
+                    
                 </div>
 
 
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="Tag3">
                     <h1 class="About_h">SKILLS</h1>
-                    <span class="About_s">* 아이콘에 마우스로 클릭하시면 자세한 내용이 나옵니다.</span>
-
+                    <span class="About_s">* 아이콘을 클릭하시면 자세한내용이 나옵니다.</span>
                     <div id="SKILLS_box">
-                        <h3>SKILLS</h3>
+                        <h3>FRONT-AND SKILLS</h3>
                         <div id="SKILLS_list">
                             <div class="SKILLS_list_tap">
                                 <div class="SKILLS_list"><img src="img/HTML.png" alt="Skillsicon"></div>
@@ -87,6 +97,80 @@
 
                             </div>
 
+                            <div id="tag_box_list">
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                    <p>웹접근성,표준성을 준수하며 시멘틱태그를 이용해 마크업 할수 있습니다.</p>
+                                    
+                                    <button class="SKILLS_b">X</button>
+                                </div>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>애니메이션을 만들수 있고 flex를 이용하여 반응형웹을 제작할 수 있습니다. </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>SCSS 문법을 활용하여 코딩속도를 높일 수 있습니다. </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>관련 라이브러리와 애니메이션, 여러 메소드를 활용할 수 있습니다. </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>자바스크립트를 이용하여 DOM을 조작할 수 있습니다. </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box">
+                                    <div class="SKILLS_tag_box_list">
+                                        <p>요소들을 컴퍼넌트화하여 재사용할 수 있고</p>
+                                        <span>Redux를 활용하여 웹사이트 제작을 한경험이 있습니다.</span>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>웹 표준을 </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>웹 표준을 </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                                <div class="SKILLS_tag_box2">
+                                    <div class="SKILLS_tag_box_list">
+                                        
+                                        <p>웹 표준을 </p>
+                                        
+                                        <button class="SKILLS_b">X</button>
+                                    </div>
+                                </div>
+                            </div>
 
                             <h3>USING TOOL</h3>
                             <div class="SKILLS_list_tap2">
@@ -96,70 +180,6 @@
                             </div>
 
 
-                            <div id="tag_box_list">
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/HTML.png" alt="Skillsicon">
-                                    <p>웹페이지를 기술하기 위한 마크업 언어이다. 조금 더 자세히 말하면<br> 웹페이지의 내용(content)과 구조(structure)을 담당하는
-                                        언어로써<br> HTML 태그를 통해 정보를 구조화하는 것이다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/CSS.png" alt="Skillsicon">
-                                    <p>CSS는 Cascading Style Sheets의 약자로 기본적인 스타일이<br>이미 지정된 HTML 요소를 개발자가 직접 다양한
-                                        스타일로<br> 디자인할 수 있는 언어입니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/SCSS.png" alt="Skillsicon">
-                                    <p>SCSS는 Sass(Syntactically Awesome Stylesheets)의 가장 널리 사용되는 문법 중 하나입니다. Sass는 CSS의
-                                        확장으로, CSS의 한계를 극복하고 스타일시트를 쉽게 작성할 수 있도록 다양한 기능을 제공합니다. SCSS는 CSS와 거의 같은 문법을 가지고
-                                        있어, CSS를 이미 알고 있는 개발자들이 쉽게 배우고 사용할 수 있는 장점이 있습니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/JQUERY.png" alt="Skillsicon">
-                                    <p>jQuery는 웹 개발에서 자바스크립트를 더 쉽게 사용할 수 있도록 설계된 경량의 자바스크립트 라이브러리입니다. 크로스 브라우징(다양한 웹
-                                        브라우저의 호환성) 문제를 해결하고, DOM(Document Object Model) 조작, 이벤트 처리, 애니메이션 구현 등 자바스크립트를
-                                        사용하여 웹 페이지를 동적으로 만드는 작업을 보다 쉽게 할 수 있도록 지원합니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/JS.png" alt="Skillsicon">
-                                    <p>jQuery는 웹 개발에서 자바스크립트를 더 쉽게 사용할 수 있도록 설계된 경량의 자바스크립트 라이브러리입니다. 2006년 존 레식(John
-                                        Resig)에 의해 개발되었으며, 크로스 브라우징(다양한 웹 브라우저의 호환성) 문제를 해결하고, DOM(Document Object
-                                        Model) 조작, 이벤트 처리, 애니메이션 구현 등 자바스크립트를 사용하여 웹 페이지를 동적으로 만드는 작업을 보다 쉽게 할 수 있도록
-                                        지원합니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box">
-                                    <img src="img/REACT.png" alt="Skillsicon">
-                                    <p>React는 사용자 인터페이스를 구축하기 위한 오픈 소스 JavaScript 라이브러리입니다. 2013년에 페이스북에 의해 개발되었으며, 웹과
-                                        모바일 애플리케이션의 프론트엔드 개발에 널리 사용되고 있습니다. React의 주요 특징은 가상 DOM, 컴포넌트 기반 아키텍처, 그리고 선언적인
-                                        UI를 포함합니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box2">
-                                    <img src="img/Visual Studio.png" alt="Skillsicon">
-                                    <p>Visual Studio는 마이크로소프트에서 개발한 통합 개발 환경(IDE)으로, 다양한 프로그래밍 언어와 플랫폼을 지원하여 소프트웨어 개발자들이
-                                        데스크톱 애플리케이션, 모바일 애플리케이션, 웹 애플리케이션, 웹 서비스 등을 개발할 수 있게 돕는 도구입니다. 처음 발표된 이후로 지속적으로
-                                        업데이트되면서 개발자 커뮤니티에서 널리 사용되고 있습니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box2">
-                                    <img src="img/Photoshop.png" alt="Skillsicon">
-                                    <p>Adobe Photoshop은 Adobe Systems에서 개발한 전문적인 이미지 편집 및 그래픽 디자인 소프트웨어입니다. 1988년에 처음
-                                        출시된 이래로, Photoshop은 디지털 아트, 사진 편집, 웹 디자인, 그래픽 디자인 등 다양한 분야에서 광범위하게 사용되고 있습니다.
-                                        사용자는 이 소프트웨어를 사용하여 사진을 조작하고, 복잡한 디지털 그림을 그리며, 다양한 시각적 효과를 생성할 수 있습니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                                <div class="SKILLS_tag_box2">
-                                    <img src="img/GIT.png" alt="Skillsicon">
-                                    <p>Git은 소프트웨어 개발에서 소스 코드 관리를 위한 분산 버전 관리 시스템입니다. 리누스 토발즈에 의해 2005년에 개발되었으며, 그의 목적은
-                                        속도와 효율성, 그리고 대규모 프로젝트의 분산 개발을 용이하게 하는 것이었습니다. Git은 오늘날 가장 널리 사용되는 버전 관리 시스템 중
-                                        하나로, 개인 프로젝트부터 대규모 기업 프로젝트에 이르기까지 다양한 규모의 개발 작업에 적용됩니다.</p>
-                                    <button class="SKILLS_b">그만보기</button>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -168,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="Tag4">
                     <div id="project">
                         <h1 class="About_h">PROJECT</h1>
                         <span class="About_s">* 이미지를 클릭하시면 홈페이지로 이동됩니다.</span>
@@ -186,17 +206,17 @@
                                 <div class="PRO_Chat_box">
                                     <h2>가구쇼핑물</h2>
                                     <h3>개인 프로젝트</h3>
-                                    <p>React 와 Redux 를 사용하여 제작된 가구쇼핑몰 입니다.</p>
-                                    <a class="pjbtn">자세히 보기</a>
+                                    <p>온라인 가구 쇼핑몰을 주제로 <b>REACT</b>를 이용하여 작업하였습니다.<br>주로 <b>REACT BOOTSTRAP</b> 과 <b>SWIPER SLIDER</b>을 이용해 구조를 잡았습니다.</p>
+                                    <a href="https://youu99.github.io/project_4/" class="pjbtn" target="_blank">자세히 보기</a>
                                 </div>
                               </div>
                               <div class="swiper-slide">
-                                <a href="https://youu99.github.io/project_3/index.html" class="PEAPJ I2"></a>
+                                <a href="https://youu99.github.io/project_3/" class="PEAPJ I2"></a>
                                 <div class="PRO_SKILLS">
                                     <p>Ajax</p>
-                                    <p>open api</p>
+                                    <p>open Api</p>
                                     <p>HTML</p>
-                                    <p>CSS</p>
+                                    <p>Json</p>
                                     <p>SCSS</p>
                                     <p>JS</p>
                                     <p>Jquery</p>
@@ -205,12 +225,12 @@
                                 <div class="PRO_Chat_box">
                                     <h2>도서 웹사이트</h2>
                                     <h3>개인 프로젝트</h3>
-                                    <p>API를 활용하여 제작된 도서 웹사이트 입니다.</p>
-                                    <a class="pjbtn">자세히 보기</a>
+                                    <p>온라인 서점을 주제로 <b>HTML,SCSS</b>를 이용하여 작업하였습니다.<br>도서정보는 <b>카카오 OPEN API</b>를 통해 가져왔고,효과는 <b>JS,JQUERY</b>를 섞어서 <br>작업했습니다.</p>
+                                    <a href="https://youu99.github.io/project_3/" class="pjbtn" target="_blank">자세히 보기</a>
                                 </div>
                               </div>
                               <div class="swiper-slide">
-                                <a href="https://youu99.github.io/TimPopor/index.html" class="PEAPJ I3"></a>
+                                <a href="https://youu99.github.io/TimPopor/" class="PEAPJ I3"></a>
                                 <div class="PRO_SKILLS">
                                     <p>HTML</p>
                                     <p>CSS</p>
@@ -222,8 +242,9 @@
                                 <div class="PRO_Chat_box">
                                     <h2>여행소개 웹사이트</h2>
                                     <h3>팀 프로젝트(메인 페이지 제작)</h3>
-                                    <p>3~4명의 팀을 구성하여 각 메인과서브를 담당하여 제작된 여행소개 웹사이트 입니다.</p>
-                                    <a class="pjbtn">자세히 보기</a>
+                                    <p>여행 소개를 주제로 <b>HTML,CSS</b>를 이용하여 작업하였습니다.<br>
+                                    작업은 4명의팀과 작업을 진행하였고 <b>메인페이지,헤더,푸터 메인과서브에<br>링크연결</b>부분을 담당하였습니다.</p>
+                                    <a href="https://youu99.github.io/TimPopor/" class="pjbtn" target="_blank">자세히 보기</a>
                                 </div>
                               </div>
                               <div class="swiper-slide">
@@ -238,8 +259,9 @@
                                 <div class="PRO_Chat_box">
                                     <h2>현대 자동차 사이트</h2>
                                     <h3>개인 프로젝트</h3>
-                                    <p>처음 반응형을 배워 제작한 현대 자동차 웹사이트 입니다.</p>
-                                    <a class="pjbtn">자세히 보기</a>
+                                    <p>현대 자동차를 주제로<b>HTML,CSS</b>를 이용하여 반응형으로 작업하였습니다.<br>
+                                    스크롤페이지 형식으로 작업하였으며, <b>JS,JQUERY</b>를 이용해 효과를주었습니다.</p>
+                                    <a href="https://youu99.github.io/project_2/" class="pjbtn" target="_blank">자세히 보기</a>
                                 </div>
                               </div>
                               <div class="swiper-slide">
@@ -252,8 +274,9 @@
                                 <div class="PRO_Chat_box">
                                     <h2>Apple 웹사이트</h2>
                                     <h3>개인 프로젝트</h3>
-                                    <p>HTML 과 CSS 를 배우고 처음제작된 Apple 웹사이트 입니다.</p>
-                                    <a class="pjbtn">자세히 보기</a>
+                                    <p>첫번쨰 프로젝트로, Apple 쇼핑몰을 주제로 하여<b>HTML,CSS</b>를<br> 사용하여 작업하였습니다..<br>
+                                    기초<b>CSS,HOVER,JQUERY</b>효과로 표현하였습니다.</p>
+                                    <a href="https://youu99.github.io/project_1/" class="pjbtn" target="_blank">자세히 보기</a>
                                 </div>
                               </div>
                           
@@ -268,21 +291,57 @@
                 </div>
 
 
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="Tag5">
+
                     <h1 class="About_h">CONTACT</h1>
-                    <p class="CON_p">Name : 이 유 민</p>
-                    <p class="CON_p1">Mobile : 010 - 9956 - 7653</p>
-                    <p class="CON_p1">Email : dbals1548@naver.com</p>
+                    <table id="CON_box">
+                      <Thead>
+                        <tr>
+                            <th class="CON_p">Name</th>
+                            <td  class="CON_p1">이 유 민</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p">Age</th>
+                            <td  class="CON_p1">29세</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p">Mobile</th>
+                            <td  class="CON_p1">010 - 9956 - 7653</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p">Email</th>
+                            <td  class="CON_p1">dbals1548@naver.com</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p">Git</th>
+                            <td  class="CON_p1">https://github.com/Youu99</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p">Career</th>
+                            <td  class="CON_p1">스마트웹&콘텐츠개발 UIUX 디자인&프론트엔드 개발자</td>
+                        </tr>
+                        <tr>
+                            <th class="CON_p"></th>
+                            <td  class="CON_p1">(23-12-10 ~ 24-05-10)</td>
+                        </tr>
+                       
+                      </Thead>  
+                  
+                </table>
                     <div class="CON_d"><img src="img/peach-goma.gif" alt=""></div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
+            <div class="custom-pagination"></div>
         </div>
 
 
 
     </div>
-
+    
+  
+    
+    
 
 
 

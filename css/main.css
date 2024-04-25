@@ -18,23 +18,24 @@ html {
 
 /* 첫 화면 페이지 */
 
-#title_page {
-  width: 100%;
-  margin: 0 auto;
-  background: #060e1b;
-  overflow: hidden;
-  height: 953px;
-  position: absolute;
-}
 
 #Tag1{
   position: relative;
 }
 
+#title_box{
+  width: 800px;
+  height: 700px;
+  margin: 200px auto 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+
 #scrollicon{
-  position: absolute;
+  margin: 200px 0 0 0;
   animation: appearDisappear infinite 2.5s;
-  top: 75%;
   width: 80px;
   height: 100px;
   cursor: pointer;
@@ -68,9 +69,7 @@ html {
 }
 
 #titleh1 {
-  position: absolute;
-  top: 30%;
-  left: 36%;
+ height: 80px;
   color: #fff;
   font-size: 80px;
   font-family: "Libre Caslon Text", serif;
@@ -81,14 +80,13 @@ html {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
+ margin: 140px 0 50px 0;
 
 
 }
 
 #title_p {
-  position: absolute;
-  top: 48%;
-  left: 30%;
+ 
   color: #fff;
   font-size: 30px;
   font-family: "Libre Caslon Text", serif;
@@ -114,11 +112,18 @@ html {
   font-family: 'Arial', sans-serif;
   font-size: 48px;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 3px 3px 0px #bbb, 8px 8px 0px rgba(0, 0, 0, 0.15);
+  color: #fff; /* 텍스트 색상을 약간 어둡게 조정 */
+  text-shadow:
+    1px 1px 0 #999, /* 가까운 거리의 그림자 */
+    3px 3px 0 #777, /* 중간 거리의 그림자 */
+    5px 5px 0 #555, /* 더 멀리 있는 그림자 */
+    7px 7px 10px rgba(0, 0, 0, 0.7), /* 더욱 깊은 그림자 및 흐릿한 효과 */
+    0 0 25px rgba(0, 0, 0, 0.5), /* 전체적인 입체감을 강화하는 흐릿한 효과 */
+    0 0 5px rgba(0, 0, 0, 0.5); /* 텍스트 주변의 미세한 흐릿함 추가 */
   margin-left: 20px;
   padding-top: 20px;
 }
+
 
 
 
@@ -172,11 +177,17 @@ html {
 }
 
 
+.mySwiper{
+  background-image: url(../img/black-space-outer-space.gif);
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 #swiper_page .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-image: url(../img/black-space-outer-space.gif);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -418,7 +429,7 @@ color: #0090F0;
   left: 90%;
   color: #0090F0;
   border: 1px solid #ddd;
-
+  border-bottom: 1px so;
 }
 
 .SKILLS_b:hover {

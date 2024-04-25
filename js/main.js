@@ -1,5 +1,5 @@
 const element = document.getElementById('titleh1');
-const texts = ["Lee Yom Min", "PORTFOLIO"];
+const texts = ["Lee You Min", "PORTFOLIO"];
 let currentText = '';
 let letterIndex = 0;
 let textIndex = 0;

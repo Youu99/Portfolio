@@ -25,7 +25,7 @@ customPagination.addEventListener('click', function(e) {
   index = e.target.getAttribute('data-index');
   if (index !== null) {
 
-    // 모든 custom-bullet 요소의 색상을 초기화
+  
     document.querySelectorAll('.custom-bullet').forEach(function(bullet) {
       bullet.style.color = '#fff'; // 기본 색상으로 설정
     });

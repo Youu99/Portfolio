@@ -2,11 +2,14 @@
   margin: 0;
   padding: 0;
 }
-ol,ul,li{
+
+ol,
+ul,
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -15,695 +18,1335 @@ html {
 }
 
 
-
-/* 첫 화면 페이지 */
-
-
-#Tag1{
-  position: relative;
-}
-
-#title_box{
-  width: 800px;
-  height: 700px;
-  margin: 200px auto 0;
+/* 파티클 */
+.particle {
   display: flex;
-  justify-content: start;
-  flex-direction: column;
-  align-items: center;
-}
-
-#scrollicon{
-  margin: 200px 0 0 0;
-  animation: appearDisappear infinite 2.5s;
-  width: 80px;
-  height: 100px;
-  cursor: pointer;
-  img{
-    width: 100%;
-  }
-}
-
-@keyframes appearDisappear {
-
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-
-#titleh1 {
- height: 80px;
-  color: #fff;
-  font-size: 80px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-  width: 10.5ch;
-  animation: typing 2.5s steps(40), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
- margin: 140px 0 50px 0;
-
-
-}
-
-#title_p {
- 
-  color: #fff;
-  font-size: 30px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-
-
-/* 네비게이션 */
-
-#nav {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.logo {
-  font-family: 'Arial', sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #fff; /* 텍스트 색상을 약간 어둡게 조정 */
-  text-shadow:
-    1px 1px 0 #999, /* 가까운 거리의 그림자 */
-    3px 3px 0 #777, /* 중간 거리의 그림자 */
-    5px 5px 0 #555, /* 더 멀리 있는 그림자 */
-    7px 7px 10px rgba(0, 0, 0, 0.7), /* 더욱 깊은 그림자 및 흐릿한 효과 */
-    0 0 25px rgba(0, 0, 0, 0.5), /* 전체적인 입체감을 강화하는 흐릿한 효과 */
-    0 0 5px rgba(0, 0, 0, 0.5); /* 텍스트 주변의 미세한 흐릿함 추가 */
-  margin-left: 20px;
-  padding-top: 20px;
-}
-
-
-
-
-#nav div {
-  display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.nav{
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.custom-pagination{
-  position: fixed;
-    top: 10px;
-    left: 75vw;
-    width: 50%;
-    z-index: 100;
-    display: flex;
-    cursor: pointer;
-    padding-top: 20px;
-}
-
-.custom-bullet{
-  color: #fff;
-  font-size: 24px;
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 600;
-  font-style: normal;
-  margin-right: 15px;
-  
-
-}
-
-/* 스와이퍼 전체페이지 */
-
-
-
-#swiper_page {
-  width: 100vw;
+  align-items: center;
+  width: 100%;
   height: 100vh;
-  position: relative;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-
-.mySwiper{
-  background-image: url(../img/black-space-outer-space.gif);
-  background-position: center;
-  background-size: cover;
-}
-
-
-
-#swiper_page .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: #fff;
-  flex-direction: column;
-
-}
-
-.swiper-slide img {
-  display: block;
-  width: 30%;
- 
-  object-fit: cover;
-}
-
-
-#swiper_page .swiper-pagination-bullet {
-  background-color: #fff;
-  width: 15px;
-  height: 15px;
-  opacity: 0.3;
-}
-
-#swiper_page .swiper-pagination-bullet-active {
-  background-color: #fff;
-  width: 15px;
-  height: 15px;
-  margin: 10px 0;
-  opacity: 1;
-}
-
-.custom-bullet:first-child{
-color: #0090F0;
-}
-
-.About_h {
-  font-family: "Libre Caslon Text", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 60px;
-  margin-top: 150px;
-  margin-bottom: 10px;
-  color: #fff; /* 텍스트 색상을 약간 어둡게 조정 */
-  text-shadow:
-    3px 4px 0 #999, /* 가까운 거리의 그림자 */
-    3px 3px 0 #777, /* 중간 거리의 그림자 */
-    5px 5px 0 #555, /* 더 멀리 있는 그림자 */
-    7px 7px 10px rgba(0, 0, 0, 0.7), /* 더욱 깊은 그림자 및 흐릿한 효과 */
-    0 0 25px rgba(0, 0, 0, 0.5), /* 전체적인 입체감을 강화하는 흐릿한 효과 */
-    0 0 5px rgba(0, 0, 0, 0.5); /* 텍스트 주변의 미세한 흐릿함 추가 */
-}
-
-#About_text_box {
-  opacity: 0;
-  animation: fadeInAnimation ease 5s;
-  animation-fill-mode: forwards;
-  margin-top: 60px;
-  }
-  
-  @keyframes fadeInAnimation {
-  from {
-  opacity: 0;
-  }
-  
-  to {
-  opacity: 1;
-  }
-  }
-
-
-#About_h2 {
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.About_p {
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 22px;
-  margin-top: 10px;
-}
-
-.image-container {
-  width: 1000px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 auto;
-}
-
-/* 이미지에 적용할 애니메이션 스타일을 정의합니다. */
-@keyframes slideInfinite {
-  from {
-    transform: translateX(-500px);
-  }
-  to {
-    transform: translateX(1000px);
-  }
-}
-
-#gomimg{
-  /* 이미지가 화면 바깥에서 시작하여 화면을 가로질러 이동하도록 설정합니다. */
+  background: black;
   position: absolute;
-  animation: slideInfinite 4s linear infinite; 
+  z-index: -100;
 }
 
-
-
-
-/* 스킬 페이지 */
-.About_s {
-  font-size: 15px;
-  font-weight: 500;
-  color: #aaaaaa;
-}
-
-
-#SKILLS_box {
-  width: 800px;
-  margin: 20px 0 0 200px;
+.particle_items {
   position: relative;
-
-  h3 {
-    text-align: left;
-    font-family: "Libre Caslon Text", serif;
-    font-weight: 700;
-    font-style: normal;
-    margin: 20px 0;
-  }
 }
 
-.SKILLS_list_tap
- {
-  width: 640px;
-  height: 100px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.SKILLS_list_tap2{
-  width: 640px;
-  height: 100px;
-  margin-bottom: 20px;
-  display: flex;
-  
-}
-
-.SKILLS_list,
-.SKILLS_list2 {
-  width: 80px;
-  height: 80px;
-  border: 1px solid #686868;
-  margin-right: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-
-  img {
-    width: 100%;
-    
-  }
-
-}
-
-
-
-.SKILLS_list_tap:nth-of-type(2) {
-  height: 130px;
-}
-
-#tag_box_list .SKILLS_tag_box,
-.SKILLS_tag_box2 {
-  width: 630px;
-  height: 100px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 10px;
-
-}
-
-#tag_box_list{
-  position: relative;
-
-}
-
-
-
-.SKILLS_tag_box_list{
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  border: 2px solid #d4d4d4;
-  border-radius: 10px;
-  box-sizing: border-box;
-
-  p{
-    font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  color: #fff;
-  margin:30px 0 0 20px;
-  text-align: left;
-  font-size: 17px;
-  }
-  
-  span{
-    font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  color: #fff;
-  margin:10px 0 0 20px;
-  text-align: left;
-  font-size: 17px;
-  }
-}
-.SKILLS_b {
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  background:none;
-  width: 50px;
-  height: 40px;
-  margin-top: 10px;
-  cursor: pointer;
-  z-index: 20;
+.particle_item {
+  width: 4px;
+  height: 4px;
   position: absolute;
-  top: 0%;
-  left: 90%;
-  color: #0090F0;
-  border: 1px solid #ddd;
-  border-bottom: 1px so;
 }
 
-.SKILLS_b:hover {
-  background-color: black;
-  color: #fff;
-  transition: all 0.5s;
-}
-
-#tag_box_list .SKILLS_tag_box,
-.SKILLS_tag_box2 {
-  display: none;
-}
-
-
-/* 프로젝트 페이지 */
-
-#project {
-  width: 700px;
-  height: 600px;
-  position: relative;
-}
-
-.mySwiper2 {
-  margin-top: 40px;
-}
-
-#project .swiper {
-  width: 100%;
-  height: 100%;
-}
-
-#project .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-
-#project .swiper-slide a {
+.particle_item::before {
   display: block;
   width: 100%;
-  height: 60%;
-  object-fit: cover;
+  height: 100%;
+  background: white;
+  content: "";
 }
 
-#project .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
+.particle_item_0 {
+  transform: scale(4) rotate(0deg);
 }
 
-
-
-.PEAPJ {
-  background-image: url(../img/REACTPJ.png);
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
+.particle_item_0::before {
+  -webkit-animation: particle 5s ease-in 1.04s infinite both running;
+  animation: particle 5s ease-in 1.04s infinite both running;
 }
 
-
-
-.PEAPJ.I2 {
-  background-image: url(../img/HTMLAPI.png);
+.particle_item_1 {
+  transform: scale(6) rotate(6deg);
 }
 
-
-
-.PEAPJ.I3 {
-  background-image: url(../img/TimHtml.png);
+.particle_item_1::before {
+  -webkit-animation: particle 5s ease-in 2.04s infinite both running;
+  animation: particle 5s ease-in 2.04s infinite both running;
 }
 
-
-
-.PEAPJ.I4 {
-  background-image: url(../img/HTMLPJ.png);
+.particle_item_2 {
+  transform: scale(8) rotate(12deg);
 }
 
-
-
-.PEAPJ.I5 {
-  background-image: url(../img/APPJ.png);
+.particle_item_2::before {
+  -webkit-animation: particle 5s ease-in 0.64s infinite both running;
+  animation: particle 5s ease-in 0.64s infinite both running;
 }
 
+.particle_item_3 {
+  transform: scale(2) rotate(18deg);
+}
 
+.particle_item_3::before {
+  -webkit-animation: particle 5s ease-in 0.8s infinite both running;
+  animation: particle 5s ease-in 0.8s infinite both running;
+}
 
-.PRO_SKILLS {
-  margin-top: 25px;
-  width: 100%;
-  display: flex;
+.particle_item_4 {
+  transform: scale(2) rotate(24deg);
+}
 
-  p {
-    font-size: 15px;
-    color: #fff;
-    width: 90px;
-    height: 30px;
-    border: 1px solid #0090F0;
-    background-color: #0090F0;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Libre Caslon Text", serif;
-    font-weight: 700;
-    font-style: normal;
-    cursor: pointer;
-    margin: 0 10px 0 0;
+.particle_item_4::before {
+  -webkit-animation: particle 5s ease-in 0.96s infinite both running;
+  animation: particle 5s ease-in 0.96s infinite both running;
+}
+
+.particle_item_5 {
+  transform: scale(6) rotate(30deg);
+}
+
+.particle_item_5::before {
+  -webkit-animation: particle 5s ease-in 0.4s infinite both running;
+  animation: particle 5s ease-in 0.4s infinite both running;
+}
+
+.particle_item_6 {
+  transform: scale(4) rotate(36deg);
+}
+
+.particle_item_6::before {
+  -webkit-animation: particle 5s ease-in 1.76s infinite both running;
+  animation: particle 5s ease-in 1.76s infinite both running;
+}
+
+.particle_item_7 {
+  transform: scale(4) rotate(42deg);
+}
+
+.particle_item_7::before {
+  -webkit-animation: particle 5s ease-in 0.2s infinite both running;
+  animation: particle 5s ease-in 0.2s infinite both running;
+}
+
+.particle_item_8 {
+  transform: scale(4) rotate(48deg);
+}
+
+.particle_item_8::before {
+  -webkit-animation: particle 5s ease-in 0.48s infinite both running;
+  animation: particle 5s ease-in 0.48s infinite both running;
+}
+
+.particle_item_9 {
+  transform: scale(10) rotate(54deg);
+}
+
+.particle_item_9::before {
+  -webkit-animation: particle 5s ease-in 0.76s infinite both running;
+  animation: particle 5s ease-in 0.76s infinite both running;
+}
+
+.particle_item_10 {
+  transform: scale(10) rotate(60deg);
+}
+
+.particle_item_10::before {
+  -webkit-animation: particle 5s ease-in 0.4s infinite both running;
+  animation: particle 5s ease-in 0.4s infinite both running;
+}
+
+.particle_item_11 {
+  transform: scale(8) rotate(66deg);
+}
+
+.particle_item_11::before {
+  -webkit-animation: particle 5s ease-in 0.68s infinite both running;
+  animation: particle 5s ease-in 0.68s infinite both running;
+}
+
+.particle_item_12 {
+  transform: scale(8) rotate(72deg);
+}
+
+.particle_item_12::before {
+  -webkit-animation: particle 5s ease-in 0.28s infinite both running;
+  animation: particle 5s ease-in 0.28s infinite both running;
+}
+
+.particle_item_13 {
+  transform: scale(2) rotate(78deg);
+}
+
+.particle_item_13::before {
+  -webkit-animation: particle 5s ease-in 2.16s infinite both running;
+  animation: particle 5s ease-in 2.16s infinite both running;
+}
+
+.particle_item_14 {
+  transform: scale(10) rotate(84deg);
+}
+
+.particle_item_14::before {
+  -webkit-animation: particle 5s ease-in 3.48s infinite both running;
+  animation: particle 5s ease-in 3.48s infinite both running;
+}
+
+.particle_item_15 {
+  transform: scale(4) rotate(90deg);
+}
+
+.particle_item_15::before {
+  -webkit-animation: particle 5s ease-in 3.2s infinite both running;
+  animation: particle 5s ease-in 3.2s infinite both running;
+}
+
+.particle_item_16 {
+  transform: scale(10) rotate(96deg);
+}
+
+.particle_item_16::before {
+  -webkit-animation: particle 5s ease-in 2.16s infinite both running;
+  animation: particle 5s ease-in 2.16s infinite both running;
+}
+
+.particle_item_17 {
+  transform: scale(2) rotate(102deg);
+}
+
+.particle_item_17::before {
+  -webkit-animation: particle 5s ease-in 2.36s infinite both running;
+  animation: particle 5s ease-in 2.36s infinite both running;
+}
+
+.particle_item_18 {
+  transform: scale(6) rotate(108deg);
+}
+
+.particle_item_18::before {
+  -webkit-animation: particle 5s ease-in 1.04s infinite both running;
+  animation: particle 5s ease-in 1.04s infinite both running;
+}
+
+.particle_item_19 {
+  transform: scale(2) rotate(114deg);
+}
+
+.particle_item_19::before {
+  -webkit-animation: particle 5s ease-in 0.32s infinite both running;
+  animation: particle 5s ease-in 0.32s infinite both running;
+}
+
+.particle_item_20 {
+  transform: scale(10) rotate(120deg);
+}
+
+.particle_item_20::before {
+  -webkit-animation: particle 5s ease-in 0.84s infinite both running;
+  animation: particle 5s ease-in 0.84s infinite both running;
+}
+
+.particle_item_21 {
+  transform: scale(4) rotate(126deg);
+}
+
+.particle_item_21::before {
+  -webkit-animation: particle 5s ease-in 0.96s infinite both running;
+  animation: particle 5s ease-in 0.96s infinite both running;
+}
+
+.particle_item_22 {
+  transform: scale(4) rotate(132deg);
+}
+
+.particle_item_22::before {
+  -webkit-animation: particle 5s ease-in 3.68s infinite both running;
+  animation: particle 5s ease-in 3.68s infinite both running;
+}
+
+.particle_item_23 {
+  transform: scale(4) rotate(138deg);
+}
+
+.particle_item_23::before {
+  -webkit-animation: particle 5s ease-in 3.08s infinite both running;
+  animation: particle 5s ease-in 3.08s infinite both running;
+}
+
+.particle_item_24 {
+  transform: scale(10) rotate(144deg);
+}
+
+.particle_item_24::before {
+  -webkit-animation: particle 5s ease-in 2.08s infinite both running;
+  animation: particle 5s ease-in 2.08s infinite both running;
+}
+
+.particle_item_25 {
+  transform: scale(8) rotate(150deg);
+}
+
+.particle_item_25::before {
+  -webkit-animation: particle 5s ease-in 3.8s infinite both running;
+  animation: particle 5s ease-in 3.8s infinite both running;
+}
+
+.particle_item_26 {
+  transform: scale(8) rotate(156deg);
+}
+
+.particle_item_26::before {
+  -webkit-animation: particle 5s ease-in 2.04s infinite both running;
+  animation: particle 5s ease-in 2.04s infinite both running;
+}
+
+.particle_item_27 {
+  transform: scale(6) rotate(162deg);
+}
+
+.particle_item_27::before {
+  -webkit-animation: particle 5s ease-in 3.12s infinite both running;
+  animation: particle 5s ease-in 3.12s infinite both running;
+}
+
+.particle_item_28 {
+  transform: scale(10) rotate(168deg);
+}
+
+.particle_item_28::before {
+  -webkit-animation: particle 5s ease-in 3.04s infinite both running;
+  animation: particle 5s ease-in 3.04s infinite both running;
+}
+
+.particle_item_29 {
+  transform: scale(2) rotate(174deg);
+}
+
+.particle_item_29::before {
+  -webkit-animation: particle 5s ease-in 3.56s infinite both running;
+  animation: particle 5s ease-in 3.56s infinite both running;
+}
+
+.particle_item_30 {
+  transform: scale(2) rotate(180deg);
+}
+
+.particle_item_30::before {
+  -webkit-animation: particle 5s ease-in 3.8s infinite both running;
+  animation: particle 5s ease-in 3.8s infinite both running;
+}
+
+.particle_item_31 {
+  transform: scale(3) rotate(186deg);
+}
+
+.particle_item_31::before {
+  -webkit-animation: particle 5s ease-in 2.28s infinite both running;
+  animation: particle 5s ease-in 2.28s infinite both running;
+}
+
+.particle_item_32 {
+  transform: scale(2) rotate(192deg);
+}
+
+.particle_item_32::before {
+  -webkit-animation: particle 5s ease-in 1.88s infinite both running;
+  animation: particle 5s ease-in 1.88s infinite both running;
+}
+
+.particle_item_33 {
+  transform: scale(2) rotate(198deg);
+}
+
+.particle_item_33::before {
+  -webkit-animation: particle 5s ease-in 1s infinite both running;
+  animation: particle 5s ease-in 1s infinite both running;
+}
+
+.particle_item_34 {
+  transform: scale(5) rotate(204deg);
+}
+
+.particle_item_34::before {
+  -webkit-animation: particle 5s ease-in 0.64s infinite both running;
+  animation: particle 5s ease-in 0.64s infinite both running;
+}
+
+.particle_item_35 {
+  transform: scale(5) rotate(210deg);
+}
+
+.particle_item_35::before {
+  -webkit-animation: particle 5s ease-in 1.52s infinite both running;
+  animation: particle 5s ease-in 1.52s infinite both running;
+}
+
+.particle_item_36 {
+  transform: scale(3) rotate(216deg);
+}
+
+.particle_item_36::before {
+  -webkit-animation: particle 5s ease-in 3.92s infinite both running;
+  animation: particle 5s ease-in 3.92s infinite both running;
+}
+
+.particle_item_37 {
+  transform: scale(5) rotate(222deg);
+}
+
+.particle_item_37::before {
+  -webkit-animation: particle 5s ease-in 1.84s infinite both running;
+  animation: particle 5s ease-in 1.84s infinite both running;
+}
+
+.particle_item_38 {
+  transform: scale(4) rotate(228deg);
+}
+
+.particle_item_38::before {
+  -webkit-animation: particle 5s ease-in 2.72s infinite both running;
+  animation: particle 5s ease-in 2.72s infinite both running;
+}
+
+.particle_item_39 {
+  transform: scale(1) rotate(234deg);
+}
+
+.particle_item_39::before {
+  -webkit-animation: particle 5s ease-in 0.4s infinite both running;
+  animation: particle 5s ease-in 0.4s infinite both running;
+}
+
+.particle_item_40 {
+  transform: scale(3) rotate(240deg);
+}
+
+.particle_item_40::before {
+  -webkit-animation: particle 5s ease-in 0.56s infinite both running;
+  animation: particle 5s ease-in 0.56s infinite both running;
+}
+
+.particle_item_41 {
+  transform: scale(5) rotate(246deg);
+}
+
+.particle_item_41::before {
+  -webkit-animation: particle 5s ease-in 1.16s infinite both running;
+  animation: particle 5s ease-in 1.16s infinite both running;
+}
+
+.particle_item_42 {
+  transform: scale(5) rotate(252deg);
+}
+
+.particle_item_42::before {
+  -webkit-animation: particle 5s ease-in 0.72s infinite both running;
+  animation: particle 5s ease-in 0.72s infinite both running;
+}
+
+.particle_item_43 {
+  transform: scale(4) rotate(258deg);
+}
+
+.particle_item_43::before {
+  -webkit-animation: particle 5s ease-in 0.92s infinite both running;
+  animation: particle 5s ease-in 0.92s infinite both running;
+}
+
+.particle_item_44 {
+  transform: scale(1) rotate(264deg);
+}
+
+.particle_item_44::before {
+  -webkit-animation: particle 5s ease-in 2.84s infinite both running;
+  animation: particle 5s ease-in 2.84s infinite both running;
+}
+
+.particle_item_45 {
+  transform: scale(5) rotate(270deg);
+}
+
+.particle_item_45::before {
+  -webkit-animation: particle 5s ease-in 2.44s infinite both running;
+  animation: particle 5s ease-in 2.44s infinite both running;
+}
+
+.particle_item_46 {
+  transform: scale(4) rotate(276deg);
+}
+
+.particle_item_46::before {
+  -webkit-animation: particle 5s ease-in 2.08s infinite both running;
+  animation: particle 5s ease-in 2.08s infinite both running;
+}
+
+.particle_item_47 {
+  transform: scale(1) rotate(282deg);
+}
+
+.particle_item_47::before {
+  -webkit-animation: particle 5s ease-in 1.4s infinite both running;
+  animation: particle 5s ease-in 1.4s infinite both running;
+}
+
+.particle_item_48 {
+  transform: scale(3) rotate(288deg);
+}
+
+.particle_item_48::before {
+  -webkit-animation: particle 5s ease-in 2.44s infinite both running;
+  animation: particle 5s ease-in 2.44s infinite both running;
+}
+
+.particle_item_49 {
+  transform: scale(1) rotate(294deg);
+}
+
+.particle_item_49::before {
+  -webkit-animation: particle 5s ease-in 0.8s infinite both running;
+  animation: particle 5s ease-in 0.8s infinite both running;
+}
+
+.particle_item_50 {
+  transform: scale(4) rotate(300deg);
+}
+
+.particle_item_50::before {
+  -webkit-animation: particle 5s ease-in 1s infinite both running;
+  animation: particle 5s ease-in 1s infinite both running;
+}
+
+.particle_item_51 {
+  transform: scale(3) rotate(306deg);
+}
+
+.particle_item_51::before {
+  -webkit-animation: particle 5s ease-in 0.32s infinite both running;
+  animation: particle 5s ease-in 0.32s infinite both running;
+}
+
+.particle_item_52 {
+  transform: scale(4) rotate(312deg);
+}
+
+.particle_item_52::before {
+  -webkit-animation: particle 5s ease-in 1.72s infinite both running;
+  animation: particle 5s ease-in 1.72s infinite both running;
+}
+
+.particle_item_53 {
+  transform: scale(3) rotate(318deg);
+}
+
+.particle_item_53::before {
+  -webkit-animation: particle 5s ease-in 1.8s infinite both running;
+  animation: particle 5s ease-in 1.8s infinite both running;
+}
+
+.particle_item_54 {
+  transform: scale(5) rotate(324deg);
+}
+
+.particle_item_54::before {
+  -webkit-animation: particle 5s ease-in 2.96s infinite both running;
+  animation: particle 5s ease-in 2.96s infinite both running;
+}
+
+.particle_item_55 {
+  transform: scale(2) rotate(330deg);
+}
+
+.particle_item_55::before {
+  -webkit-animation: particle 5s ease-in 1.64s infinite both running;
+  animation: particle 5s ease-in 1.64s infinite both running;
+}
+
+.particle_item_56 {
+  transform: scale(1) rotate(336deg);
+}
+
+.particle_item_56::before {
+  -webkit-animation: particle 5s ease-in 3.68s infinite both running;
+  animation: particle 5s ease-in 3.68s infinite both running;
+}
+
+.particle_item_57 {
+  transform: scale(5) rotate(342deg);
+}
+
+.particle_item_57::before {
+  -webkit-animation: particle 5s ease-in 0.56s infinite both running;
+  animation: particle 5s ease-in 0.56s infinite both running;
+}
+
+.particle_item_58 {
+  transform: scale(4) rotate(348deg);
+}
+
+.particle_item_58::before {
+  -webkit-animation: particle 5s ease-in 3.2s infinite both running;
+  animation: particle 5s ease-in 3.2s infinite both running;
+}
+
+.particle_item_59 {
+  transform: scale(3) rotate(354deg);
+}
+
+.particle_item_59::before {
+  -webkit-animation: particle 5s ease-in 2.56s infinite both running;
+  animation: particle 5s ease-in 2.56s infinite both running;
+}
+
+.particle_item_60 {
+  transform: scale(4) rotate(360deg);
+}
+
+.particle_item_60::before {
+  -webkit-animation: particle 5s ease-in 0.36s infinite both running;
+  animation: particle 5s ease-in 0.36s infinite both running;
+}
+
+.particle_item_61 {
+  transform: scale(4) rotate(14deg);
+}
+
+.particle_item_61::before {
+  -webkit-animation: particle 5s ease-in 0.04s infinite both running;
+  animation: particle 5s ease-in 0.04s infinite both running;
+}
+
+  .particle_item_62 {
+    transform: scale(4) rotate(14deg);
   }
-}
 
-.PRO_Chat_box {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100px;
-  position: relative;
-
-  h2{
-    font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    color: #fff;
+  .particle_item_62::before {
+    -webkit-animation: particle 5s ease-in 0.04s infinite both running;
+    animation: particle 5s ease-in 0.04s infinite both running;
   }
-  h3{
-    font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #ddd;
-    font-size: 17px;
-    margin-top: 10px;
     
-  }
-  a {
-    font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #fff;
-    margin-top: 20px;
-    text-decoration: none;
-    
-  }
-  p{
-    margin-top: 10px;
-    text-align: left;
-    line-height: 30px;
-  }
 
-  b{
-    color: #0090F0;
-    font-size: 22px;
-  }
- 
-}
-#project .PRO_Chat_box .pjbtn{
-  width: 140px;
-  height: 35px;
-  margin-top: 30px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 300px;
-  cursor: pointer;
-  position: absolute;
-  top: -35px;
-  left: 37%;
-}
+    @-webkit-keyframes particle {
+      0% {
+        opacity: 0.25;
+        transform: scale(0) translateX(0);
+      }
 
-#project .PRO_Chat_box .pjbtn:hover{
-  background-color: #fff;
-  color: black;
-  transition: all 0.5s;
-  
-}
+      100% {
+        opacity: 1;
+        transform: scale(1) translateX(100vw);
+      }
+    }
 
-#project .swiper-pagination-progressbar-fill {
-  background-color: #eee;
-  height: 8px;
+    @keyframes particle {
+      0% {
+        opacity: 0.25;
+        transform: scale(0) translateX(0);
+      }
 
-}
-
-#project .swiper-pagination-horizontal {
-  height: 8px;
-  top: 59%;
-}
-
-#project .swiper-button-next {
-  position: absolute;
-  top: 460px;
-  left: 750px;
-  color: #fff;
-}
-
-#project .swiper-button-prev {
-  position: absolute;
-  top: 460px;
-  left: -60px;
-  color: #fff;
-}
+      100% {
+        opacity: 1;
+        transform: scale(1) translateX(100vw);
+      }
+    }
 
 
-/* 마무리 페이지 */
+    /* 첫 화면 페이지 */
 
 
-#CON_box{
-  width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 120px;
-}
+    #Tag1 {
+      position: relative;
+    }
 
-.CON_p{
-  font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    width: 200px;
-    margin-top: 20px;
-    
-}
+    #title_box {
+      width: 800px;
+      height: 700px;
+      margin: 200px auto 0;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.CON_p1{
-  font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 22px;
-    margin-top: 10px;
-    text-align: right;
-    width: 600px;
-    
-}
+    #scrollicon {
+      margin: 200px 0 0 0;
+      animation: appearDisappear infinite 2.5s;
+      width: 80px;
+      height: 100px;
+      cursor: pointer;
 
-.CON_p2{
-  font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 22px;
-    margin-top: 10px;
-   line-height: 37px;
-   width: 200px;
-}
+      img {
+        width: 100%;
+      }
+    }
 
-.CON_d{
-  width: 300px;
-  img{
-    width: 100%;
-  }
-}
+    @keyframes appearDisappear {
 
-tr{
- height: 40px;
-}
-tr:hover{
-  color: #0090F0;
-  cursor: pointer;
-  transition: all 0.5s;
-}
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+
+    #titleh1 {
+      height: 80px;
+      color: #fff;
+      font-size: 80px;
+      font-family: "Libre Caslon Text", serif;
+      font-weight: 700;
+      font-style: normal;
+      animation: typing 2.5s steps(40), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      margin: 140px 0 50px 0;
+      /* 입체적인 효과를 위한 그림자 추가 */
+      text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2),
+        6px 6px 0px rgba(0, 0, 0, 0.15);
+
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    #title_p {
+      font-size: 22px;
+      font-family: "Libre Caslon Text", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+
+    /* 네비게이션 */
+
+    #nav {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      /* 텍스트 색상을 약간 어둡게 조정 */
+      text-shadow:
+        1px 1px 0 #999,
+        /* 가까운 거리의 그림자 */
+        3px 3px 0 #777,
+        /* 중간 거리의 그림자 */
+        5px 5px 0 #555,
+        /* 더 멀리 있는 그림자 */
+        7px 7px 10px rgba(0, 0, 0, 0.7),
+        /* 더욱 깊은 그림자 및 흐릿한 효과 */
+        0 0 25px rgba(0, 0, 0, 0.5),
+        /* 전체적인 입체감을 강화하는 흐릿한 효과 */
+        0 0 5px rgba(0, 0, 0, 0.5);
+      /* 텍스트 주변의 미세한 흐릿함 추가 */
+      margin-left: 20px;
+      padding-top: 20px;
+    }
+
+
+
+
+    #nav div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .custom-pagination {
+      position: fixed;
+      top: 10px;
+      left: 75vw;
+      width: 50%;
+      z-index: 100;
+      display: flex;
+      cursor: pointer;
+      padding-top: 20px;
+    }
+
+    .custom-bullet {
+      color: #fff;
+      font-size: 24px;
+      font-family: "Libre Caslon Text", serif;
+      font-weight: 600;
+      font-style: normal;
+      margin-right: 15px;
+
+
+    }
+
+    /* 스와이퍼 전체페이지 */
+
+
+
+    #swiper_page {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+    .mySwiper .space {
+      width: 100%;
+      height: 100%;
+      z-index: -1000;
+      position: absolute;
+    }
+
+
+
+    #swiper_page .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: #fff;
+      flex-direction: column;
+      z-index: 100;
+
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 30%;
+
+      object-fit: cover;
+    }
+
+
+    #swiper_page .swiper-pagination-bullet {
+      background-color: #fff;
+      width: 15px;
+      height: 15px;
+      opacity: 0.3;
+    }
+
+    #swiper_page .swiper-pagination-bullet-active {
+      background-color: #fff;
+      width: 15px;
+      height: 15px;
+      margin: 10px 0;
+      opacity: 1;
+    }
+
+    .custom-bullet:first-child {
+      color: #0090F0;
+    }
+
+    .About_h {
+      font-family: "Libre Caslon Text", serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 60px;
+      margin-top: 150px;
+      margin-bottom: 10px;
+      color: #fff;
+      /* 텍스트 색상을 약간 어둡게 조정 */
+      text-shadow:
+        3px 4px 0 #999,
+        /* 가까운 거리의 그림자 */
+        3px 3px 0 #777,
+        /* 중간 거리의 그림자 */
+        5px 5px 0 #555,
+        /* 더 멀리 있는 그림자 */
+        7px 7px 10px rgba(0, 0, 0, 0.7),
+        /* 더욱 깊은 그림자 및 흐릿한 효과 */
+        0 0 25px rgba(0, 0, 0, 0.5),
+        /* 전체적인 입체감을 강화하는 흐릿한 효과 */
+        0 0 5px rgba(0, 0, 0, 0.5);
+      /* 텍스트 주변의 미세한 흐릿함 추가 */
+    }
+
+    #About_text_box {
+      opacity: 0;
+      animation: fadeInAnimation ease 5s;
+      animation-fill-mode: forwards;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+
+    #About_h2 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .About_p {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .image-container {
+      width: 1000px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    /* 이미지에 적용할 애니메이션 스타일을 정의합니다. */
+    @keyframes slideInfinite {
+      from {
+        transform: translateX(-500px);
+      }
+
+      to {
+        transform: translateX(1000px);
+      }
+    }
+
+    #gomimg {
+      /* 이미지가 화면 바깥에서 시작하여 화면을 가로질러 이동하도록 설정합니다. */
+      position: absolute;
+      animation: slideInfinite 4s linear infinite;
+    }
+
+
+
+
+    /* 스킬 페이지 */
+    .About_s {
+      font-size: 15px;
+      font-weight: 500;
+      color: #aaaaaa;
+    }
+
+
+    #SKILLS_box {
+      width: 800px;
+      margin: 20px 0 0 200px;
+      position: relative;
+
+      h3 {
+        text-align: left;
+        font-family: "Libre Caslon Text", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: 20px 0;
+      }
+    }
+
+    .SKILLS_list_tap {
+      width: 640px;
+      height: 100px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .SKILLS_list_tap2 {
+      width: 640px;
+      height: 100px;
+      margin-bottom: 20px;
+      display: flex;
+
+    }
+
+    .SKILLS_list,
+    .SKILLS_list2 {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #686868;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+
+      img {
+        width: 100%;
+
+      }
+
+    }
+
+
+
+    .SKILLS_list_tap:nth-of-type(2) {
+      height: 130px;
+    }
+
+    #tag_box_list .SKILLS_tag_box,
+    .SKILLS_tag_box2 {
+      width: 630px;
+      height: 100px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px;
+
+    }
+
+    #tag_box_list {
+      position: relative;
+
+    }
+
+
+
+    .SKILLS_tag_box_list {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      border: 2px solid #d4d4d4;
+      border-radius: 10px;
+      box-sizing: border-box;
+
+      p {
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff;
+        margin: 30px 0 0 20px;
+        text-align: left;
+        font-size: 17px;
+      }
+
+      span {
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff;
+        margin: 10px 0 0 20px;
+        text-align: left;
+        font-size: 17px;
+      }
+    }
+
+    .SKILLS_b {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      background: none;
+      width: 50px;
+      height: 40px;
+      margin-top: 10px;
+      cursor: pointer;
+      z-index: 20;
+      position: absolute;
+      top: 0%;
+      left: 90%;
+      color: #0090F0;
+      border: 1px solid #ddd;
+      border-bottom: 1px so;
+    }
+
+    .SKILLS_b:hover {
+      background-color: black;
+      color: #fff;
+      transition: all 0.5s;
+    }
+
+    #tag_box_list .SKILLS_tag_box,
+    .SKILLS_tag_box2 {
+      display: none;
+    }
+
+
+    /* 프로젝트 페이지 */
+
+    #project {
+      width: 700px;
+      height: 600px;
+      position: relative;
+    }
+
+    .mySwiper2 {
+      margin-top: 40px;
+    }
+
+    #project .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    #project .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    #project .swiper-slide a {
+      display: block;
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+    }
+
+    #project .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+    }
+
+
+
+    .PEAPJ {
+      background-image: url(../img/REACTPJ.png);
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+
+
+    .PEAPJ.I2 {
+      background-image: url(../img/HTMLAPI.png);
+    }
+
+
+
+    .PEAPJ.I3 {
+      background-image: url(../img/TimHtml.png);
+    }
+
+
+
+    .PEAPJ.I4 {
+      background-image: url(../img/HTMLPJ.png);
+    }
+
+
+
+    .PEAPJ.I5 {
+      background-image: url(../img/APPJ.png);
+    }
+
+
+
+    .PRO_SKILLS {
+      margin-top: 25px;
+      width: 100%;
+      display: flex;
+
+      p {
+        font-size: 15px;
+        color: #fff;
+        width: 90px;
+        height: 30px;
+        border: 1px solid #0090F0;
+        background-color: #0090F0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Libre Caslon Text", serif;
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .PRO_Chat_box {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100px;
+      position: relative;
+
+      h2 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        color: #fff;
+      }
+
+      h3 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: #ddd;
+        font-size: 17px;
+        margin-top: 10px;
+
+      }
+
+      a {
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff;
+        margin-top: 20px;
+        text-decoration: none;
+
+      }
+
+      p {
+        margin-top: 10px;
+        text-align: left;
+        line-height: 30px;
+      }
+
+      b {
+        color: #0090F0;
+        font-size: 22px;
+      }
+
+    }
+
+    #project .PRO_Chat_box .pjbtn {
+      width: 140px;
+      height: 35px;
+      margin-top: 30px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 300px;
+      cursor: pointer;
+      position: absolute;
+      top: -35px;
+      left: 37%;
+    }
+
+    #project .PRO_Chat_box .pjbtn:hover {
+      background-color: #fff;
+      color: black;
+      transition: all 0.5s;
+
+    }
+
+    #project .swiper-pagination-progressbar-fill {
+      background-color: #eee;
+      height: 8px;
+
+    }
+
+    #project .swiper-pagination-horizontal {
+      height: 8px;
+      top: 59%;
+    }
+
+    #project .swiper-button-next {
+      position: absolute;
+      top: 460px;
+      left: 750px;
+      color: #fff;
+    }
+
+    #project .swiper-button-prev {
+      position: absolute;
+      top: 460px;
+      left: -60px;
+      color: #fff;
+    }
+
+
+    /* 마무리 페이지 */
+
+
+    #CON_box {
+      width: 700px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 120px;
+    }
+
+    .CON_p {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 24px;
+      width: 200px;
+      margin-top: 20px;
+
+    }
+
+    .CON_p1 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 22px;
+      margin-top: 10px;
+      text-align: right;
+      width: 600px;
+
+    }
+
+    .CON_p2 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 22px;
+      margin-top: 10px;
+      line-height: 37px;
+      width: 200px;
+    }
+
+    .CON_d {
+      width: 300px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    tr {
+      height: 40px;
+    }
+
+    tr:hover {
+      color: #0090F0;
+      cursor: pointer;
+      transition: all 0.5s;
+    }

@@ -230,7 +230,14 @@ color: #0090F0;
   font-size: 60px;
   margin-top: 150px;
   margin-bottom: 10px;
-  text-shadow: 5px 3px 0px #bbb, 8px 8px 0px rgba(0, 0, 0, 0.15);
+  color: #fff; /* 텍스트 색상을 약간 어둡게 조정 */
+  text-shadow:
+    3px 4px 0 #999, /* 가까운 거리의 그림자 */
+    3px 3px 0 #777, /* 중간 거리의 그림자 */
+    5px 5px 0 #555, /* 더 멀리 있는 그림자 */
+    7px 7px 10px rgba(0, 0, 0, 0.7), /* 더욱 깊은 그림자 및 흐릿한 효과 */
+    0 0 25px rgba(0, 0, 0, 0.5), /* 전체적인 입체감을 강화하는 흐릿한 효과 */
+    0 0 5px rgba(0, 0, 0, 0.5); /* 텍스트 주변의 미세한 흐릿함 추가 */
 }
 
 #About_text_box {
